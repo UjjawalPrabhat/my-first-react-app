@@ -1,5 +1,6 @@
 import "./HeroStyles.css";
 
+// why is func used here and not like const or a class
 function Hero(props) {
   return (
     //   empty figment
@@ -9,7 +10,9 @@ function Hero(props) {
         <div className="hero-text">
           <h1>{props.title}</h1>
           <p>{props.text}</p>
-          <a href={props.url} className={props.btnClass}>{props.btnText}</a>
+          <a href={props.url} className={props.btnClass}>
+            {props.btnText}
+          </a>
         </div>
       </div>
     </>
