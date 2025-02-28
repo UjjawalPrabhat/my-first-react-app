@@ -1,6 +1,8 @@
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import contactImg from "../assets/night.jpg";
+import Footer from "../components/footer";
+import ContactForm from "../components/ContactForm"
 
 function Contact() {
   return (
@@ -13,6 +15,8 @@ function Contact() {
         title="Contact"
         btnClass="hide"
       />
+      <ContactForm/>
+      <Footer/>
     </>
   );
 }

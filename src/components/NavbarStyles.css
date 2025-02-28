@@ -131,9 +131,8 @@ button:hover {
     display: block;
     cursor: pointer;
   }
-  .menu-icons i{
+  .menu-icons i {
     font-size: 1.2rem;
     color: #222;
-
   }
 }

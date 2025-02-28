@@ -1,18 +1,28 @@
-import { Component } from "react";
+import { Component } from "react"; // importing component class for class based component
 import "./NavbarStyles.css";
 import { MenuItems } from "./MenuItems";
 import { Link } from "react-router-dom";
 
+// For state management we use class based components
+// Functional components are used for UI
+// ex - toggle button ke state ke hisab se ui change hoti hai
+// state current data ko store krta hai
+
+ // extends component likhne se component class ki saari functionalities ab navbar class acces kr skti hai
 class Navbar extends Component {
   // initializing state
   // under class state must be an object
   state = { clicked: false };
 
+  // using arrow funtion so that it automatically binds this i.e. refers to the class
   handleClick = () => {
     this.setState({ clicked: !this.state.clicked });
   };
 
   // using render coz we're extending our component
+  // component ke saath render method likhna zaruri hai kyuki ui kaise hoga yhi btaata hai
+  // render method is called when the component is mounted or updated
+  
   render() {
     return (
       <nav className="NavbarItems">
@@ -35,7 +45,9 @@ class Navbar extends Component {
               </li>
             );
           })}
-          <button>Sign Up</button>
+          <Link to="/signup">
+            <button>Sign Up</button>
+          </Link>
         </ul>
       </nav>
     );
@@ -43,3 +55,5 @@ class Navbar extends Component {
 }
 
 export default Navbar; // allows App.js to use this
+
+// make the same navbar using useState hook
